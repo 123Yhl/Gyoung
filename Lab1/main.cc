@@ -27,7 +27,7 @@ int total = 0;
 std::mutex mtx;
 
 bool (*solve)(int) = solve_sudoku_dancing_links;
-
+ 
 char **block;
 bool *block_solved;
 
