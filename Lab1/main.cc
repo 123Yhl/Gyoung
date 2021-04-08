@@ -87,8 +87,12 @@ int main(int argc, char *argv[])
     for (int i = 0; i < thread_num; ++i)
     {
       ths[i] = std::thread(block_solve, offset, (offset + step >= batch_cnt) ? (batch_cnt - offset) : step);
-      ths[i].join();
+      //ths[i].join();
       offset += step;
+    }
+    for (int i = 0; i < thread_num; i++)
+    {
+      ths[i].join();
     }
     total_solved += batch_cnt;
   }
