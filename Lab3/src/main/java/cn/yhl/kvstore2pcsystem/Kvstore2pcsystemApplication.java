@@ -22,10 +22,8 @@ public class Kvstore2pcsystemApplication implements CommandLineRunner {
 
     public static void main(String[] args) throws IOException {
         String filename = args[1];
-        //String filename = "F:\\Labs\\kvstore2pcsystem\\src\\main\\resources\\coordinator.conf";
         Config config = Config.getConfig();
         config.LoadConfigFile(filename);
-        //System.out.println(config);
         if(config.getMode()==1){
             String str = "--server.port="+config.getParticipants().getFirst().getPort();
             String str1 = "--server.address="+config.getParticipants().getFirst().getIp();
