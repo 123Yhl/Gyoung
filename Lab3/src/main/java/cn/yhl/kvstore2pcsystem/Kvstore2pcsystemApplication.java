@@ -50,5 +50,6 @@ public class Kvstore2pcsystemApplication implements CommandLineRunner {
             participant.setIp(config.getParticipants().getFirst().getIp());
             participant.setPort(config.getParticipants().getFirst().getPort());
         }
+        
     }
 }
